@@ -1,0 +1,81 @@
+Command: vcs -zoix=DLL=/eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//lib/x86Linux64/libzc.so \
+-full64 -covg_disable_cg -zoix=xcombine -file sim.working/zvcs_run.f
+              Z01X (TM) built with Chronologic VCS (TM)
+   VCS Version: S-2021.09-SP1-1_Full64 -- Fri Jan 20 17:13:30 2023
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'DUT/GL/pipeline_decode.v'
+Parsing design file './bin/strobes.sv'
+Parsing library file 'DUT/NanGate_15nm_OCL_functional.v'
+TimeScale is 1 ns / 1 ns
+Z01X (TM) Version: S-2021.09-SP1-1 (64-bit, Jan 11 2022) for Linux 64-bit
+
+Z01X Command Line Arguments: -f ./bin/load_design.f ./bin/strobes.sv +timescale+override+1ns/1ns +top+pipeline_decode+strobe +sv +notimingchecks +define+ZOIX +suppress+cell +delay_mode_fault -l log/zoix_compile.log
+
+Info:    Constructing Simulation Database
+Info:    Processing UDPs
+Starting vcs inline pass...
+Info:    Top Level Modules:
+Info:       pipeline_decode
+Info:       strobe
+Info:    Building simulation Database
+Info:       module: pipeline_decode
+Info:       module: DFFRNQ_X1
+Info:       module: DFFSNQ_X1
+Info:       module: BUF_X1
+Info:       module: NOR2_X1
+Info:       module: INV_X1
+Info:       module: BUF_X2
+Info:       module: AOI22_X1
+Info:       module: NAND2_X1
+Info:       module: NOR3_X1
+Info:       module: AND2_X1
+Info:       module: NAND3_X1
+Info:       module: OAI22_X1
+Info:       module: AOI21_X1
+Info:       module: NOR4_X1
+Info:       module: OAI21_X1
+Info:       module: NAND4_X1
+Info:       module: OR2_X1
+Info:       module: OR3_X1
+Info:       module: strobe
+Info:    Hierarchy built
+Info:    Writing simulation database
+Info:     Writing design primitives
+Info:     Writing simulated nets
+Warning! 1 unused signals in the design. Use +verbose+unused to see which
+signals are unused.
+Info:     Writing symbol tables
+Info:    Design contents:
+Info:    	     1966 Simulation primitives
+Info:    	     2306 Simulated wires
+Info:    	     1609 Module instances
+Info:    	      101 Continuous assigns
+Info:    	        1 Behavioral instances
+Info:    	        1 No diverge modules
+
+Info:    Compile complete with:  0 Errors 1 Warning
+Info:        Warning summary:
+Info:            1 uncategorized warnings
+Info:    CPU Time: 0.2s ; Elapsed Time: 0.4s ; Data Size: 401.2MB 
+
+
+Compiling in 64-bit mode.
+Linking "zoix.sim" ...
+Info:    CPU Time: 1.6s ; Elapsed Time: 1.9s ; 
+Info:    Z01X compilation complete Fri Jan 20 17:13:31 2023

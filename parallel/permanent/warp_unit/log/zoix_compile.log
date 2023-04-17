@@ -1,0 +1,78 @@
+Command: vcs -zoix=DLL=/software/ZOIX/R-2020.12-SP2/lib/x86Linux64/libzc.so -full64 \
+-covg_disable_cg -file sim.working/zvcs_run.f
+              Z01X (TM) built with Chronologic VCS (TM)
+    VCS Version: R-2020.12-SP2_Full64 -- Mon May  2 13:18:53 2022
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Parsing design file 'DUT/GL/dp_regfile.v'
+Parsing design file 'DUT/GL/warp_unit.v'
+Parsing design file './bin/strobes.sv'
+Parsing library file 'DUT/NanGate_15nm_OCL_functional.v'
+TimeScale is 1 ns / 1 ns
+Z01X (TM) Version: R-2020.12-SP2 (64-bit, May 19 2021) for Linux 64-bit
+
+Z01X Command Line Arguments: -f ./bin/load_design.f ./bin/strobes.sv +timescale+override+1ns/1ns +top+warp_unit+strobe +sv +notimingchecks +define+ZOIX +suppress+cell +delay_mode_fault -l log/zoix_compile.log
+
+Info:    Constructing Simulation Database
+Info:    Processing UDPs
+Starting vcs inline pass...
+Info:    Top Level Modules:
+Info:       warp_unit
+Info:       strobe
+Info:    Building simulation Database
+Info:       module: warp_unit
+Info:       module: dp_regfile
+Info:       module: dp_regfile
+Info:       module: DFFRNQ_X1
+Info:       module: DFFSNQ_X1
+Info:       module: BUF_X1
+Info:       module: NOR2_X1
+Info:       module: NAND2_X1
+Info:       module: INV_X1
+Info:       module: OAI22_X1
+Info:       module: AOI22_X1
+Info:       module: BUF_X2
+Info:       module: OAI21_X1
+Info:       module: AOI21_X1
+Info:       module: AND2_X1
+Info:       module: NAND4_X1
+Info:       module: NAND3_X1
+Info:       module: NOR3_X1
+Info:       module: XOR2_X1
+Info:       module: XNOR2_X1
+Info:       module: FA_X1
+Info:       module: NOR4_X1
+Info:       module: OR2_X1
+Info:       module: AND4_X1
+Info:       module: OR4_X1
+Info:       module: strobe
+Info:    Hierarchy built
+Info:    Writing simulation database
+Info:     Writing design primitives
+Info:     Writing simulated nets
+Warning! 253 unused signals in the design. Use +verbose+unused to see which
+signals are unused.
+Info:     Writing symbol tables
+Info:    Design contents:
+Info:    	     5880 Simulation primitives
+Info:    	     6898 Simulated wires
+Info:    	     4352 Module instances
+Info:    	        1 Continuous assigns
+Info:    	        3 Behavioral instances
+Info:    	        1 No diverge modules
+
+Info:    Compile complete with:  0 Errors 1 Warning
+Info:        Warning summary:
+Info:            1 uncategorized warnings
+Info:    CPU Time: 0.4s ; Elapsed Time: 0.9s ; Data Size: 364.3MB 
+
+
+Compiling in 64-bit mode.
+Linking "zoix.sim" ...
+Info:    CPU Time: 1.7s ; Elapsed Time: 2.9s ; 
+Info:    Z01X compilation complete Mon May 2 13:18:54 2022

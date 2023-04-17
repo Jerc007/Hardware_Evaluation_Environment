@@ -1,0 +1,68 @@
+Command: vcs -zoix=DLL=/software/ZOIX/R-2020.12-SP2/lib/x86Linux64/libzc.so -full64 \
+-covg_disable_cg -file sim.working/zvcs_run.f
+              Z01X (TM) built with Chronologic VCS (TM)
+    VCS Version: R-2020.12-SP2_Full64 -- Thu Apr 28 17:22:49 2022
+
+                    Copyright (c) 1991 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Parsing design file 'DUT/GL/pipeline_fetch.v'
+Parsing design file './bin/strobes.sv'
+Parsing library file 'DUT/NanGate_15nm_OCL_functional.v'
+TimeScale is 1 ns / 1 ns
+Z01X (TM) Version: R-2020.12-SP2 (64-bit, May 19 2021) for Linux 64-bit
+
+Z01X Command Line Arguments: -f ./bin/load_design.f ./bin/strobes.sv +timescale+override+1ns/1ns +top+pipeline_fetch+strobe +sv +notimingchecks +define+ZOIX +suppress+cell +delay_mode_fault -l log/zoix_compile.log
+
+Info:    Constructing Simulation Database
+Info:    Processing UDPs
+Starting vcs inline pass...
+Info:    Top Level Modules:
+Info:       pipeline_fetch
+Info:       strobe
+Info:    Building simulation Database
+Info:       module: pipeline_fetch
+Info:       module: DFFRNQ_X1
+Info:       module: BUF_X1
+Info:       module: AND2_X1
+Info:       module: BUF_X2
+Info:       module: INV_X1
+Info:       module: NAND2_X1
+Info:       module: OAI22_X1
+Info:       module: NOR3_X2
+Info:       module: NAND3_X1
+Info:       module: NOR3_X1
+Info:       module: OAI21_X1
+Info:       module: AOI21_X1
+Info:       module: NOR2_X1
+Info:       module: AOI22_X1
+Info:       module: OR4_X1
+Info:       module: HA_X1
+Info:       module: FA_X1
+Info:       module: XOR2_X1
+Info:       module: NAND4_X1
+Info:       module: strobe
+Info:    Hierarchy built
+Info:    Writing simulation database
+Info:     Writing design primitives
+Info:     Writing simulated nets
+Info:     Writing symbol tables
+Info:    Design contents:
+Info:    	     1784 Simulation primitives
+Info:    	     1962 Simulated wires
+Info:    	     1297 Module instances
+Info:    	        2 Continuous assigns
+Info:    	        1 Behavioral instances
+Info:    	        1 No diverge modules
+
+Info:    Compile complete with:  0 Errors 0 Warnings
+Info:    CPU Time: 0.2s ; Elapsed Time: 0.3s ; Data Size: 357.8MB 
+
+
+Compiling in 64-bit mode.
+Linking "zoix.sim" ...
+Info:    CPU Time: 1.4s ; Elapsed Time: 1.6s ; 
+Info:    Z01X compilation complete Thu Apr 28 17:22:50 2022

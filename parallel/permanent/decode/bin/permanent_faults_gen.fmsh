@@ -1,0 +1,25 @@
+
+
+set(var=[resources], messages=[all])
+set(var=[defines], format=[standard])
+set(var=[defines], dictionary.enable=[1])
+set(var=[fsim], dictionary.values=[all])
+set(var=[fdef], method=[fr], fr.fr=[bin/fault_list.sff],abort=[error])
+# set (var=[coats],status=[NA,NX,PP,FP,PD,FD,PE,FE,PL,LS,PS,RS,PR,RE,PX,DX])
+# set (var=[coats],status=[DD, ND])
+
+set (var=[fsim],hyperfault=[0])
+design()
+
+addtst(test=[pipeline_decode], stimtype=[vcd], dictionary.enable=[1], stim=[DUT/RTL_sim/dumpports_decode.vcd],dut.stim=[pipeline_decode,tb_top_level.uGPGPU.uStreamingMultiProcessor.uPipelineDecode],stim_options=[+TESTNAME=pipeline_decode] )
+
+#addtst(test=[RCA], stimtype=[vcd], dictionary.enable=[1], stim=[../tmax/dumpports_rtl.riscv_core.vcde],stim_options=[+TESTNAME=riscv_core] )
+
+fsim()
+
+coverage(file=[SAF_coverage.sff])
+# coverage (type=[dictionary],file=[saf_dic_short.txt],test=[RCA], style=[short])
+
+#coverage(type=[dictionary],test=[RCA],file=[saf_dic.txt])  
+coverage (type=[dictionary],file=[saf_dic_long.txt],test=[pipeline_decode])
+
