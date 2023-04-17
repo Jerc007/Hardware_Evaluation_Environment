@@ -231,7 +231,7 @@ The environment directly depends on three main parameters affecting the executio
 
 - **Workload to be evaluated:** This parameter is directly related with the number of dynamic instructions to be evaluated from a workload. Thus, a proportional increase in the evaluation time is expected for a large number of dynamic instruction per workload.
 
-- **Number of Faults per hardware unit:** This parameter directly depends on the structures and detalied descriptions of a targeted unit for the evaluation. 
+- **Number of Faults per hardware unit:** This parameter directly depends on the structures and detailed descriptions of a targeted unit for the evaluation. 
 
 It is worth noting that the main memory (RAM) size might affect the performance and efficiency of the multi-threading mechanisms for the parallel fault injection experiments.
 
