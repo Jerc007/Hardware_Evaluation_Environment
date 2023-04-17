@@ -1,0 +1,9 @@
+IADD32 incorrect_operation_code 246
+GST incorrect_operation_code 131
+IMAD incorrect_operation_code 93
+FADD32 incorrect_operation_code 128
+GLD incorrect_operation_code 220
+MOV incorrect_operation_code 119
+RET incorrect_operation_code 125
+I2I incorrect_operation_code 104
+SHL incorrect_operation_code 97
