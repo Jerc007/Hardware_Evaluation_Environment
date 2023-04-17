@@ -44,6 +44,7 @@ tion, **(2)** Focused micro-architectural characterization, and **(3)** Error cl
 
 The operation of the hardware evaluation framework is focused on the micro-architectural characterization of hardware units inside hardware descriptions of digital devices (specially GPUs).
 Thus, a set of preliminary conditions and configurations are required for the correct operation of the environmentm, during the characterization.
+**It must be noted that the previous steps are mandatory to adapt the proposed environment to target new hardware units or customize the unit profiling.**
 
 Set of preliminary steps:
 
@@ -63,7 +64,7 @@ main_path = "/home/e.rodriguez"
 2) Gate-level generation of each unit
 The environment requires the gate-level (verilog) netlist for the fault-injection campaigns. Thus, Design Compiler and a 15nm Technology library are used to generate the gate-level version (see folder intruction_level_ers/GL for examples of generation and the versions used in the experiments).
 
-Once the two previous steps are correctly performed, the profiling, evaluation and classification can be performed. It must be noted that the previous steps are mandatory to adapt the proposed environment to target new hardware units or customize the unit profiling.
+Once the two previous steps are correctly performed, the profiling, evaluation and classification can be performed. 
 If the purpose is to analyze the effect on the target hardware units (e.g., control units in GPUs), the preliminary steps can be skipped.
 
 
