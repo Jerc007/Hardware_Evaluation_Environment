@@ -168,34 +168,34 @@ the general output of the execution must be something like:
 
 
 ```
-*total mask list lenght: *
-*14905*
-*total number of global_general_structure_operation_errors:*
-*1263*
-*total number of global_general_structure_operand_errors:*
-*4732*
-*total number of global_general_structure_order_errors:*
-*229*
-*total number of global_general_structure_execution_errors:*
-*6663*
-*Number of operation errors per subgroup: *
-*Incorrect op. code: 1263        Invalid op. code: 0*
-*Number of operand errors per subgroup:  *
-*Incorrect register addressed: 667        Incorrect parallel parameters: 624*
-*Invalid register: 2806        Incorrect immediate operand: 1019*
-*Number of order errors per subgroup: *
-*commitment order violation: 229*
-*Number of execution errors per subgroup: *
-*Incorrect active threads: 1353        Incorrect active CTA: 99*
-*Incorrect active line: 50        Incorrect active warp: 0*
-*Incorrect functional unit: 1092        Incorrect memory source: 3122*
-*Incorrect memory destiny: 2377*
-*execution times:*
-*Golden model import time(s): 7.72418022156*
-*Golden simulation time(s): 14.6056377888*
-*Total golden simuation time(s): 22.3298180103*
-*fault-injection simulation time(s): 75.3150038719*
-*fault analysis time(s): 3.61250519753*
+total mask list lenght:
+ 14905 
+ total number of global_general_structure_operation_errors: 
+ 1263 
+ total number of global_general_structure_operand_errors: 
+ 4732 
+ total number of global_general_structure_order_errors: 
+ 229 
+ total number of global_general_structure_execution_errors: 
+ 6663 
+ Number of operation errors per subgroup:  
+ Incorrect op. code: 1263        Invalid op. code: 0 
+ Number of operand errors per subgroup:   
+ Incorrect register addressed: 667        Incorrect parallel parameters: 624 
+ Invalid register: 2806        Incorrect immediate operand: 1019 
+ Number of order errors per subgroup:  
+ commitment order violation: 229 
+ Number of execution errors per subgroup:  
+ Incorrect active threads: 1353        Incorrect active CTA: 99 
+ Incorrect active line: 50        Incorrect active warp: 0 
+ Incorrect functional unit: 1092        Incorrect memory source: 3122 
+ Incorrect memory destiny: 2377 
+ execution times: 
+ Golden model import time(s): 7.72418022156 
+ Golden simulation time(s): 14.6056377888 
+ Total golden simuation time(s): 22.3298180103 
+ fault-injection simulation time(s): 75.3150038719 
+ fault analysis time(s): 3.61250519753 
 ```
 
 
