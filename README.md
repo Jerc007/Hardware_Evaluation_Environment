@@ -213,7 +213,7 @@ total mask list lenght:
 ```
 
 
-**It is worth noting that according to the observable categories names, these can be indiferently:**
+**It is worth noting that according to the observable categories names, these can be indiferently associated as:**
 
 **Operation = Operation**
 
