@@ -224,6 +224,20 @@ Including execution times per each of the three steps, a general overview of the
 **Execution = Parallel management**
 
 
+## Estimated times for the hardware evaluation:
+
+The environment directly depends on three main parameters to stimate its performance during execution:
+
+- **Computational power** of the used *server/workstation/laptop* for its deployment.
+
+- **Workload to be evaluated:** This parameter is directly related with the number of dynamic instructions to be evaluated from a workload. Thus, a proportional increase in the evaluation time is expected for a large number of dynamic instruction per workload.
+
+- **Number of Faults per hardware unit:** This parameter directly depends on the structures and detalied descriptions of a targeted unit for the evaluation. 
+
+It is worth noting that the main memory (RAM) size might affect the performance and efficiency of the multi-threading mechanisms for the parallel fault injection experiments.
+
+
+In the experiments, for the control units in the GPU, we determine evaliuation times per workload in the range from around 2 minutes up to around 30 hours. 
 
 ## Acknowledgments:
 
