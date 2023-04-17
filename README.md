@@ -36,8 +36,8 @@ the analysis and evaluation by resorting to the careful structural analysis of t
 Then, the fault characterization faces the almost unfeasible evaluation times of complete workloads in a GPU (i.e., the complete operation of an application in a gate-level GPU model) by resorting to localized fault injection campaigns (on the target unit, only) and multi-threading mechanisms to split the workload’s instructions and the faults on individual fault evaluations per instruction. 
 A later analysis determines the impact effects at the unit level and also provides the mapping of faults to corresponding feasible instruction errors (i.e., error models) to support accurate cross-layer evaluation.
 
-The environment implements the following three steps of the methodology: (1) Instruction’s profiling and unit feature’s extrac-
-tion, (2) Focused micro-architectural characterization, and (3) Error classification and analysis.
+The environment implements the following three steps of the methodology: **(1)** Instruction’s profiling and unit feature’s extrac-
+tion, **(2)** Focused micro-architectural characterization, and **(3)** Error classification and analysis.
 
 
 ## Preliminary and Configuration steps:
