@@ -45,11 +45,11 @@ tion, **(2)** Focused micro-architectural characterization, and **(3)** Error cl
 The operation of the hardware evaluation framework is focused on the micro-architectural characterization of hardware units inside hardware descriptions of digital devices (specially GPUs).
 Thus, a set of preliminary conditions and configurations are required for the correct operation of the environmentm, during the characterization.
 
-**Please follow ONLY step 0 when targeting the analysis and evaluation of the decode, fetch, or warp_units in the GPU model. Otherwise, follow steps 0, 1, and 2 to adapt the proposed environment, to target new hardware units, or to customize the unit profiling step.
+**Please follow ONLY step 0 when targeting the analysis and evaluation of the decode, fetch, or warp_units in the GPU model. Otherwise, follow steps 0, 1, and 2 to adapt the proposed environment, to target new hardware units, or to customize the unit profiling step.**
 
 Set of preliminary steps:
 
-**0)** Set the root folder path: 
+**0) Set the root folder path:**
 
 Once, the repository is clioned, please check that the absolute pahts are correctly identified. For this purpose, check that the variable **main_path** in *general_launcher.py* is correctly set according to the target root directory.
 
@@ -58,7 +58,7 @@ e.g.,
 main_path = "/home/e.rodriguez"
 ```
 
-**1)** Import the GPU model for evaluation:
+**1) Import the GPU model for evaluation:**
 
 The VHDL description (of the GPU model) must be imported in the following path:
 
@@ -71,7 +71,7 @@ e.g.,
 main_path = "/home/e.rodriguez"
 ```
 
-**2)** Gate-level generation of each unit
+**2) Gate-level generation of each unit**
 The environment requires the gate-level (verilog) netlist for the fault-injection campaigns. Thus, Design Compiler and a 15nm Technology library are used to generate the gate-level version (see folder intruction_level_ers/GL for examples of generation and the versions used in the experiments).
 
 Once the two previous steps are correctly performed, the profiling, evaluation and classification can be performed. 
