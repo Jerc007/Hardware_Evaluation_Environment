@@ -71,11 +71,12 @@ e.g.,
 main_path = "/home/e.rodriguez"
 ```
 
-**2) Gate-level generation of each unit**
-The environment requires the gate-level (verilog) netlist for the fault-injection campaigns. Thus, Design Compiler and a 15nm Technology library are used to generate the gate-level version (see folder intruction_level_ers/GL for examples of generation and the versions used in the experiments).
+**2) Gate-level generation of a unit:**
+
+The environment requires the gate-level *(verilog)* netlist for the fault-injection campaigns. Thus, The **Design Compiler** framework and a **15nm Technology library** are used to generate the gate-level version (*see folder intruction_level_ers/GL for examples of generation and the versions used in the experiments*).
 
 Once the two previous steps are correctly performed, the profiling, evaluation and classification can be performed. 
-If the purpose is to analyze the effect on the target hardware units (e.g., control units in GPUs), the preliminary steps can be skipped.
+**If the purpose is to analyze the effect on the target hardware units (e.g., control units in GPUs), the preliminary steps can be skipped.**
 
 
 ## Configuration steps of the environment:
