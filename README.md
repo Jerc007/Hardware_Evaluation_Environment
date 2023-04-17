@@ -1,4 +1,4 @@
-## Hardware evaluation environment
+## Hardware Evaluation Environment (artifact)
 
 Name of the project:
 
