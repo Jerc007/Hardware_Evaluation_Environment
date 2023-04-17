@@ -179,7 +179,7 @@ contains the fine-grain hardware-level classification of the faults and the main
 
 The additional files are intermediate-step files, generated during the procedures of error evaluation and classification.
 
-If the profiling, fault simulation and error classifications are successful, a general output message must show the following information:
+If the profiling, fault simulation and error classifications are successful, a general output message must show general information of the correct operation of the fault simulation and their execution times (including execution times per each of the three steps), as observed in the following example:
 
 ```
 total mask list lenght:
@@ -211,7 +211,7 @@ total mask list lenght:
  fault-injection simulation time(s): 75.3150038719 
  fault analysis time(s): 3.61250519753 
 ```
-Including execution times per each of the three steps, a general overview of the faults analyzed and their initial classifications.
+
 
 **It is worth noting that according to the observable categories names, these can be indiferently:**
 
