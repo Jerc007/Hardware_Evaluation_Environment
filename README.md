@@ -225,7 +225,7 @@ total mask list lenght:
 
 ## Estimated times for the hardware evaluation:
 
-The environment directly depends on three main parameters to stimate its performance during execution:
+The environment directly depends on three main parameters affecting the execution performance per evaluation:
 
 - **Computational power** of the used *server/workstation/laptop* for its deployment.
 
