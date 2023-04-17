@@ -163,6 +163,11 @@ Other files are use as intermediate-step files for the analyses.
 
 the general output of the execution must be something like:
 
+
+
+
+
+```
 *total mask list lenght: *
 *14905*
 *total number of global_general_structure_operation_errors:*
@@ -191,6 +196,7 @@ the general output of the execution must be something like:
 *Total golden simuation time(s): 22.3298180103*
 *fault-injection simulation time(s): 75.3150038719*
 *fault analysis time(s): 3.61250519753*
+```
 
 
 
