@@ -1,0 +1,2 @@
+set rangecnst_severity_level warning
+run 60000000ns

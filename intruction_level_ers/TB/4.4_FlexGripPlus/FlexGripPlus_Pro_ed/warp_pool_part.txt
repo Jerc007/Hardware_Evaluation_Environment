@@ -1,0 +1,9 @@
+sa0 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(0) - 
+sa1 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(0) - 
+sa0 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(1) - 
+sa1 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(1) - 
+sa0 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(2) - 
+sa1 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(2) - 
+sa0 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(3) - 
+sa1 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(3) - 
+sa0 /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(4) - 

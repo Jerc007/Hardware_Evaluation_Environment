@@ -1,0 +1,22 @@
+#	"$GPGPU_GENERIC_ROOT/syn/8cores_dpregfiles.vhd" \
+
+
+
+#	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_syn.v" \
+
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_unit_rtl.vhd" \
+
+
+vsim -64  -t 100ns -novopt -voptargs=+acc work.tb_top_level
+
+
+
+
+
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warps_done_mask_LUT.v" \
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_id_calc.v" \
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_generator.v" \
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_scheduler.v" \
+	"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_checker.v" \
+
+"$GPGPU_GENERIC_ROOT/SMP/WarpUnit/warp_unit.v" \

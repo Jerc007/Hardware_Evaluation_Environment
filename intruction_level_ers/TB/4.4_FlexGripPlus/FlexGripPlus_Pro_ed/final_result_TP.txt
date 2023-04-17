@@ -1,0 +1,26 @@
+signal failed	D	(SDC)	: /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(0)
+Injection time:  (0)
+Log #: 0
+signal failed	D	(SDC)	: /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(1)
+Injection time:  (0)
+Log #: 2
+signal failed	D	(SDC)	: /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(2)
+Injection time:  (0)
+Log #: 4
+signal failed	D	(SDC)	: /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(3)
+Injection time:  (0)
+Log #: 6
+signal failed	D	(SDC)	: /uGPGPU/uStreamingMultiProcessor/uWarpUnit/uWarpPoolMemory/mem(0)(4)
+Injection time:  (0)
+Log #: 8
+Total # Faults evaluated :		9
+Total # Faults detected :		0
+Total # Faults not detected :		4
+Error_by_halt:...................................0
+Error_by_Silent_data_corruption(SDC):............5
+Error_by_time_out:...............................0
+Error_not_detected( silent):.....................4
+Error_by_time_out_(Error in memory not detected):0
+Error_by_time_out_(Error in memory detected).....5
+(SDC) Detected events: 5
+(SDC) Not Detected events: 4

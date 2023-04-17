@@ -1,0 +1,183 @@
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity TP_instructions is
+	port(
+		instruction_pointer_in : in  integer;
+		num_instructions_out   : out integer;
+		instruction_out        : out std_logic_vector(31 downto 0)
+	);
+end TP_instructions;
+
+architecture arch of TP_instructions is
+	constant TP_INSTRUCTIONS : integer := 154;
+
+begin
+	num_instructions_out <= TP_INSTRUCTIONS;
+
+	process(instruction_pointer_in)
+	begin
+		case instruction_pointer_in is
+			                when 0 => instruction_out <= x"d00e0001";   -- 0000    GST.U32 global14 [R0], R0;
+                when 1 => instruction_out <= x"a0c00780";
+                when 2 => instruction_out <= x"d00e00fd";   -- 0008    GST.U32 global14 [R0], R63;
+                when 3 => instruction_out <= x"a0c00780";
+                when 4 => instruction_out <= x"d00e001d";   -- 0010    GST.U32 global14 [R0], R7;
+                when 5 => instruction_out <= x"a0c00780";
+                when 6 => instruction_out <= x"d00e00e1";   -- 0018    GST.U32 global14 [R0], R56;
+                when 7 => instruction_out <= x"a0c00780";
+                when 8 => instruction_out <= x"d00e00a9";   -- 0020    GST.U32 global14 [R0], R42;
+                when 9 => instruction_out <= x"a0c00780";
+                when 10 => instruction_out <= x"d00e0055";   -- 0028    GST.U32 global14 [R0], R21;
+                when 11 => instruction_out <= x"a0c00780";
+                when 12 => instruction_out <= x"d00e0031";   -- 0030    GST.U32 global14 [R0], R12;
+                when 13 => instruction_out <= x"a0c00780";
+                when 14 => instruction_out <= x"d00e00cd";   -- 0038    GST.U32 global14 [R0], R51;
+                when 15 => instruction_out <= x"a0c00780";
+                when 16 => instruction_out <= x"d00e7e01";   -- 0040    GST.U32 global14 [R63], R0;
+                when 17 => instruction_out <= x"a0c00780";
+                when 18 => instruction_out <= x"d00e7efd";   -- 0048    GST.U32 global14 [R63], R63;
+                when 19 => instruction_out <= x"a0c00780";
+                when 20 => instruction_out <= x"d00e7e1d";   -- 0050    GST.U32 global14 [R63], R7;
+                when 21 => instruction_out <= x"a0c00780";
+                when 22 => instruction_out <= x"d00e7ee1";   -- 0058    GST.U32 global14 [R63], R56;
+                when 23 => instruction_out <= x"a0c00780";
+                when 24 => instruction_out <= x"d00e7ea9";   -- 0060    GST.U32 global14 [R63], R42;
+                when 25 => instruction_out <= x"a0c00780";
+                when 26 => instruction_out <= x"d00e7e55";   -- 0068    GST.U32 global14 [R63], R21;
+                when 27 => instruction_out <= x"a0c00780";
+                when 28 => instruction_out <= x"d00e7e31";   -- 0070    GST.U32 global14 [R63], R12;
+                when 29 => instruction_out <= x"a0c00780";
+                when 30 => instruction_out <= x"d00e7ecd";   -- 0078    GST.U32 global14 [R63], R51;
+                when 31 => instruction_out <= x"a0c00780";
+                when 32 => instruction_out <= x"d00e0e01";   -- 0080    GST.U32 global14 [R7], R0;
+                when 33 => instruction_out <= x"a0c00780";
+                when 34 => instruction_out <= x"d00e0efd";   -- 0088    GST.U32 global14 [R7], R63;
+                when 35 => instruction_out <= x"a0c00780";
+                when 36 => instruction_out <= x"d00e0e1d";   -- 0090    GST.U32 global14 [R7], R7;
+                when 37 => instruction_out <= x"a0c00780";
+                when 38 => instruction_out <= x"d00e0ee1";   -- 0098    GST.U32 global14 [R7], R56;
+                when 39 => instruction_out <= x"a0c00780";
+                when 40 => instruction_out <= x"d00e0ea9";   -- 00a0    GST.U32 global14 [R7], R42;
+                when 41 => instruction_out <= x"a0c00780";
+                when 42 => instruction_out <= x"d00e0e55";   -- 00a8    GST.U32 global14 [R7], R21;
+                when 43 => instruction_out <= x"a0c00780";
+                when 44 => instruction_out <= x"d00e0e31";   -- 00b0    GST.U32 global14 [R7], R12;
+                when 45 => instruction_out <= x"a0c00780";
+                when 46 => instruction_out <= x"d00e0ecd";   -- 00b8    GST.U32 global14 [R7], R51;
+                when 47 => instruction_out <= x"a0c00780";
+                when 48 => instruction_out <= x"d00e7001";   -- 00c0    GST.U32 global14 [R56], R0;
+                when 49 => instruction_out <= x"a0c00780";
+                when 50 => instruction_out <= x"d00e70fd";   -- 00c8    GST.U32 global14 [R56], R63;
+                when 51 => instruction_out <= x"a0c00780";
+                when 52 => instruction_out <= x"d00e701d";   -- 00d0    GST.U32 global14 [R56], R7;
+                when 53 => instruction_out <= x"a0c00780";
+                when 54 => instruction_out <= x"d00e70e1";   -- 00d8    GST.U32 global14 [R56], R56;
+                when 55 => instruction_out <= x"a0c00780";
+                when 56 => instruction_out <= x"d00e70a9";   -- 00e0    GST.U32 global14 [R56], R42;
+                when 57 => instruction_out <= x"a0c00780";
+                when 58 => instruction_out <= x"d00e7055";   -- 00e8    GST.U32 global14 [R56], R21;
+                when 59 => instruction_out <= x"a0c00780";
+                when 60 => instruction_out <= x"d00e7031";   -- 00f0    GST.U32 global14 [R56], R12;
+                when 61 => instruction_out <= x"a0c00780";
+                when 62 => instruction_out <= x"d00e70cd";   -- 00f8    GST.U32 global14 [R56], R51;
+                when 63 => instruction_out <= x"a0c00780";
+                when 64 => instruction_out <= x"d00e5401";   -- 0100    GST.U32 global14 [R42], R0;
+                when 65 => instruction_out <= x"a0c00780";
+                when 66 => instruction_out <= x"d00e54fd";   -- 0108    GST.U32 global14 [R42], R63;
+                when 67 => instruction_out <= x"a0c00780";
+                when 68 => instruction_out <= x"d00e541d";   -- 0110    GST.U32 global14 [R42], R7;
+                when 69 => instruction_out <= x"a0c00780";
+                when 70 => instruction_out <= x"d00e54e1";   -- 0118    GST.U32 global14 [R42], R56;
+                when 71 => instruction_out <= x"a0c00780";
+                when 72 => instruction_out <= x"d00e54a9";   -- 0120    GST.U32 global14 [R42], R42;
+                when 73 => instruction_out <= x"a0c00780";
+                when 74 => instruction_out <= x"d00e5455";   -- 0128    GST.U32 global14 [R42], R21;
+                when 75 => instruction_out <= x"a0c00780";
+                when 76 => instruction_out <= x"d00e5431";   -- 0130    GST.U32 global14 [R42], R12;
+                when 77 => instruction_out <= x"a0c00780";
+                when 78 => instruction_out <= x"d00e54cd";   -- 0138    GST.U32 global14 [R42], R51;
+                when 79 => instruction_out <= x"a0c00780";
+                when 80 => instruction_out <= x"d00e2a01";   -- 0140    GST.U32 global14 [R21], R0;
+                when 81 => instruction_out <= x"a0c00780";
+                when 82 => instruction_out <= x"d00e2afd";   -- 0148    GST.U32 global14 [R21], R63;
+                when 83 => instruction_out <= x"a0c00780";
+                when 84 => instruction_out <= x"d00e2a1d";   -- 0150    GST.U32 global14 [R21], R7;
+                when 85 => instruction_out <= x"a0c00780";
+                when 86 => instruction_out <= x"d00e2ae1";   -- 0158    GST.U32 global14 [R21], R56;
+                when 87 => instruction_out <= x"a0c00780";
+                when 88 => instruction_out <= x"d00e2aa9";   -- 0160    GST.U32 global14 [R21], R42;
+                when 89 => instruction_out <= x"a0c00780";
+                when 90 => instruction_out <= x"d00e2a55";   -- 0168    GST.U32 global14 [R21], R21;
+                when 91 => instruction_out <= x"a0c00780";
+                when 92 => instruction_out <= x"d00e2a31";   -- 0170    GST.U32 global14 [R21], R12;
+                when 93 => instruction_out <= x"a0c00780";
+                when 94 => instruction_out <= x"d00e2acd";   -- 0178    GST.U32 global14 [R21], R51;
+                when 95 => instruction_out <= x"a0c00780";
+                when 96 => instruction_out <= x"d00e1801";   -- 0180    GST.U32 global14 [R12], R0;
+                when 97 => instruction_out <= x"a0c00780";
+                when 98 => instruction_out <= x"d00e18fd";   -- 0188    GST.U32 global14 [R12], R63;
+                when 99 => instruction_out <= x"a0c00780";
+                when 100 => instruction_out <= x"d00e181d";   -- 0190    GST.U32 global14 [R12], R7;
+                when 101 => instruction_out <= x"a0c00780";
+                when 102 => instruction_out <= x"d00e18e1";   -- 0198    GST.U32 global14 [R12], R56;
+                when 103 => instruction_out <= x"a0c00780";
+                when 104 => instruction_out <= x"d00e18a9";   -- 01a0    GST.U32 global14 [R12], R42;
+                when 105 => instruction_out <= x"a0c00780";
+                when 106 => instruction_out <= x"d00e1855";   -- 01a8    GST.U32 global14 [R12], R21;
+                when 107 => instruction_out <= x"a0c00780";
+                when 108 => instruction_out <= x"d00e1831";   -- 01b0    GST.U32 global14 [R12], R12;
+                when 109 => instruction_out <= x"a0c00780";
+                when 110 => instruction_out <= x"d00e18cd";   -- 01b8    GST.U32 global14 [R12], R51;
+                when 111 => instruction_out <= x"a0c00780";
+                when 112 => instruction_out <= x"d00e6601";   -- 01c0    GST.U32 global14 [R51], R0;
+                when 113 => instruction_out <= x"a0c00780";
+                when 114 => instruction_out <= x"d00e66fd";   -- 01c8    GST.U32 global14 [R51], R63;
+                when 115 => instruction_out <= x"a0c00780";
+                when 116 => instruction_out <= x"d00e661d";   -- 01d0    GST.U32 global14 [R51], R7;
+                when 117 => instruction_out <= x"a0c00780";
+                when 118 => instruction_out <= x"d00e66e1";   -- 01d8    GST.U32 global14 [R51], R56;
+                when 119 => instruction_out <= x"a0c00780";
+                when 120 => instruction_out <= x"d00e66a9";   -- 01e0    GST.U32 global14 [R51], R42;
+                when 121 => instruction_out <= x"a0c00780";
+                when 122 => instruction_out <= x"d00e6655";   -- 01e8    GST.U32 global14 [R51], R21;
+                when 123 => instruction_out <= x"a0c00780";
+                when 124 => instruction_out <= x"d00e6631";   -- 01f0    GST.U32 global14 [R51], R12;
+                when 125 => instruction_out <= x"a0c00780";
+                when 126 => instruction_out <= x"d00e66cd";   -- 01f8    GST.U32 global14 [R51], R51;
+                when 127 => instruction_out <= x"a0c00780";
+                when 128 => instruction_out <= x"d00e0001";   -- 0200    GST.U8 global14 [R0], R0;
+                when 129 => instruction_out <= x"a0000780";
+                when 130 => instruction_out <= x"d00e0efd";   -- 0208    GST.U8 global14 [R7], R63;
+                when 131 => instruction_out <= x"a0000780";
+                when 132 => instruction_out <= x"d00e70a9";   -- 0210    GST.U8 global14 [R56], R42;
+                when 133 => instruction_out <= x"a0000780";
+                when 134 => instruction_out <= x"d00e7e55";   -- 0218    GST.U8 global14 [R63], R21;
+                when 135 => instruction_out <= x"a0000780";
+                when 136 => instruction_out <= x"d00e0001";   -- 0220    GST.U16 global14 [R0], R0;
+                when 137 => instruction_out <= x"a0400780";
+                when 138 => instruction_out <= x"d00e0efd";   -- 0228    GST.U16 global14 [R7], R63;
+                when 139 => instruction_out <= x"a0400780";
+                when 140 => instruction_out <= x"d00e70a9";   -- 0230    GST.U16 global14 [R56], R42;
+                when 141 => instruction_out <= x"a0400780";
+                when 142 => instruction_out <= x"d00e7e55";   -- 0238    GST.U16 global14 [R63], R21;
+                when 143 => instruction_out <= x"a0400780";
+                when 144 => instruction_out <= x"d00e0001";   -- 0240    GST.S16 global14 [R0], R0;
+                when 145 => instruction_out <= x"a0600780";
+                when 146 => instruction_out <= x"d00e0efd";   -- 0248    GST.S16 global14 [R7], R63;
+                when 147 => instruction_out <= x"a0600780";
+                when 148 => instruction_out <= x"d00e70a9";   -- 0250    GST.S16 global14 [R56], R42;
+                when 149 => instruction_out <= x"a0600780";
+                when 150 => instruction_out <= x"d00e7e55";   -- 0258    GST.S16 global14 [R63], R21;
+                when 151 => instruction_out <= x"a0600780";
+                when 152 => instruction_out <= x"30000003";   -- RET
+                when 153 => instruction_out <= x"00000780";
+
+			when others => null;
+		end case;
+	end process;
+
+end arch;
+

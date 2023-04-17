@@ -1,0 +1,47 @@
+$comment
+	File created using the following command:
+		vcd file ../../Test_Programs/dumpports_SFU_1.vcd -dumpports
+$end
+$date
+	Sat Apr 23 18:02:24 2022
+$end
+$version
+	dumpports QuestaSim Version 10.5c_4
+$end
+$timescale
+	1ns
+$end
+
+$scope module tb_top_level $end
+
+$scope module uGPGPU $end
+
+$scope module uStreamingMultiProcessor $end
+
+$scope module uPipelineExecute $end
+
+$scope module uSpecialFunctionUnitProcessor $end
+
+$scope begin gSpecialFunctionUnit(1) $end
+
+$scope module uSpecialFunctionUnit $end
+$var port [31:0] <0 src1_i $end
+$var port [2:0] <1 selop_i $end
+$var port [31:0] <2 Result_o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpports
+pDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 66666666666666666666666666666666 00000000000000000000000000000000 <0 
+pLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL 66666666666666666666666666666666 00000000000000000000000000000000 <2 
+pUUU 000 666 <1 
+$end
+$vcdclose
+#771925
+$end
