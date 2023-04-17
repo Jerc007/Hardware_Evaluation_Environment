@@ -51,9 +51,14 @@ Set of preliminary steps:
 
 The GPU model must be imported in the following path:
 
-```current_folder/user/intruction_level_ers/```
+```main_path/intruction_level_ers/```
 
-Please, check that line 1710 in *general_launcher.py* is correclty configured.
+Please, check that the variable **main_path** in *general_launcher.py* is correctly set according to the root of folder directory.
+
+e.g.,
+```
+main_path = "/home/e.rodriguez"
+```
 
 2) Gate-level generation of each unit
 The environment requires the gate-level (verilog) netlist for the fault-injection campaigns. Thus, Design Compiler and a 15nm Technology library are used to generate the gate-level version (see folder intruction_level_ers/GL for examples of generation and the versions used in the experiments).
