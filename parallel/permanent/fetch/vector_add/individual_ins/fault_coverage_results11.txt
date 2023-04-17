@@ -1,0 +1,184 @@
+
+                                   Z01X (TM)
+
+       Version S-2021.09-SP1-1 for linux64 - Jan 11, 2022      
+
+                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Mon Jan 30 16:04:59 CET 2023
+Z01X (TM) Version: S-2021.09-SP1-1 (64-bit, Jan 11 2022) for Linux 64-bit
+
+23/01/30 16:04:59  Note:    Reading load file:bin/permanent_faults_gen.fmsh
+>  
+>  
+> set(var=[resources], messages=[all]) 
+23/01/30 16:04:59  Note:    Set resources[messages] to "all".
+> set(var=[defines], format=[standard]) 
+23/01/30 16:04:59  Note:    Set defines[format] to "standard".
+> set(var=[defines], dictionary.enable=[1]) 
+23/01/30 16:04:59  Note:    Set defines[dictionary.enable] to 1.
+23/01/30 16:04:59  Warning: Options will be saved when a design is opened
+> set(var=[fsim], dictionary.values=[all]) 
+23/01/30 16:04:59  Note:    Set fsim[dictionary.values] to "all".
+> set(var=[fdef], method=[fr], fr.fr=[bin/fault_list.sff],abort=[error]) 
+23/01/30 16:04:59  Note:    Set fdef[fr.fr] to "bin/fault_list.sff".
+23/01/30 16:04:59  Note:    Set fdef[abort] to "error".
+23/01/30 16:04:59  Note:    Set fdef[method] to "fr".
+> # set (var=[coats],status=[NA,NX,PP,FP,PD,FD,PE,FE,PL,LS,PS,RS,PR,RE,PX,DX]) 
+> # set (var=[coats],status=[DD, ND]) 
+>  
+> set (var=[fsim],hyperfault=[0]) 
+23/01/30 16:04:59  Note:    Set fsim[hyperfault] to 0.
+> design() 
+23/01/30 16:05:01  CMD: cp bin/fault_list.sff __globfiles__/fault_list.sff
+23/01/30 16:05:01  Note:    Generating design fault universe file
+23/01/30 16:05:01  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fr2fdef -fr __globfiles__/fault_list.sff +warnreturn+0 +format+standard +verbose -l fr2fdef.log
+23/01/30 16:05:01  Note:    Job fr2fdef begun
+23/01/30 16:05:01  Note:    Job fr2fdef completed: Host: buono
+23/01/30 16:05:01  Note:    Total: 9320 Prime: 6174 Collapsed: 3146 Untestable: 50
+23/01/30 16:05:01  Note:    Fault Generation Completed 0 Errors 1 Warnings
+23/01/30 16:05:01  Note:    Created design, directory=/home/e.rodriguez/Z0IXs_parallel/permanent/fetch_vector_add_11
+23/01/30 16:05:01  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -func __fubs__/design/__path__ -genfub +job_id+4c29a7df806792c5 -l __fubs__/design/design.log
+>  
+> addtst(test=[pipeline_fetch], stimtype=[vcd], dictionary.enable=[1], stim=[DUT/RTL_sim/dumpports_fetch.vcd],dut.stim=[pipeline_fetch,tb_top_level.uGPGPU.uStreamingMultiProcessor.uPipelineFetch],stim_options=[+TESTNAME=pipeline_fetch] ) 
+23/01/30 16:05:02  Note:    Adding test: pipeline_fetch
+23/01/30 16:05:02  CMD: ln -s ../../sim.zdb __tests__/pipeline_fetch/sim.zdb
+23/01/30 16:05:02  CMD: ln -s ../../zoix.sim __tests__/pipeline_fetch/zoix.sim
+23/01/30 16:05:02  CMD: cp DUT/RTL_sim/dumpports_fetch.vcd __tests__/pipeline_fetch/dumpports_fetch.vcd
+23/01/30 16:05:02  CMD: ln -s ../../../__tests__/pipeline_fetch/dumpports_fetch.vcd __fubs__/design/pipeline_fetch/dumpports_fetch.vcd
+23/01/30 16:05:02  CMD: ln -s ../../../sim.zdb __fubs__/design/pipeline_fetch/sim.zdb
+23/01/30 16:05:02  CMD: ln -s ../../../zoix.sim __fubs__/design/pipeline_fetch/zoix.sim
+>  
+> #addtst(test=[RCA], stimtype=[vcd], dictionary.enable=[1], stim=[../tmax/dumpports_rtl.riscv_core.vcde],stim_options=[+TESTNAME=riscv_core] ) 
+>  
+> fsim() 
+23/01/30 16:05:02  Note:    Performing testability analysis
+23/01/30 16:05:02  CMD: ./zoix.sim -toggle __tests__/pipeline_fetch/pipeline_fetch.vtog -fstrobe __tests__/pipeline_fetch/__fstrobes__ -l __tests__/pipeline_fetch/zoix_rt.log +vcd+file+__tests__/pipeline_fetch/dumpports_fetch.vcd +progress -testdir __tests__/pipeline_fetch/ +vcd+dut+pipeline_fetch+tb_top_level.uGPGPU.uStreamingMultiProcessor.uPipelineFetch +TESTNAME=pipeline_fetch -testname pipeline_fetch +job_id+ac2987dfc0f792c5
+23/01/30 16:05:02  Note:    Toggle simulation for test: pipeline_fetch
+23/01/30 16:05:02  Note:    Job toggle Test: pipeline_fetch begun
+23/01/30 16:05:02  Note:    Job toggle completed: Host: buono Test: pipeline_fetch
+23/01/30 16:05:02  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -test pipeline_fetch -seltyp observe +job_id+4c29a7df806792c5 -fstrobe __tests__/pipeline_fetch/__fstrobes__ -testid 65537 -l __fubs__/design/pipeline_fetch/coats.log
+23/01/30 16:05:02  Note:    Testability analysis for Test: pipeline_fetch
+23/01/30 16:05:02  Note:    Job coats Test: pipeline_fetch begun
+23/01/30 16:05:02  Note:    Job coats completed: Host: buono Test: pipeline_fetch
+23/01/30 16:05:06  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/boots -fdeffiles __fubs__/design/fdeffiles.txt -record -dir ./ -fub design -fdef sim.fdef -l __fubs__/design/boots.log
+23/01/30 16:05:06  Note:    Job boots Test: All begun
+23/01/30 16:05:06  Note:    Job boots completed: Host: buono Test: All
+23/01/30 16:05:06  Note:    Updating Testability Report
+23/01/30 16:05:06  Note:    Simulating Test: pipeline_fetch
+23/01/30 16:05:06  Note:    Fault simulation on Test: pipeline_fetch starting
+23/01/30 16:05:06  Note:    Generate fault origins for Test: pipeline_fetch
+23/01/30 16:05:06  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -test pipeline_fetch -recalc -m -l __fubs__/design/pipeline_fetch/fdef.log
+23/01/30 16:05:06  Note:    Job coats Test: pipeline_fetch begun
+23/01/30 16:05:06  Note:    Job coats completed: Host: buono Test: pipeline_fetch
+23/01/30 16:05:06  Note:    Test: pipeline_fetch selected 4587 out of 6174 remaining faults to simulate
+23/01/30 16:05:06  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_sim -fdef __fubs__/design/pipeline_fetch/pipeline_fetch.fdef -q +vcd+file+__tests__/pipeline_fetch/dumpports_fetch.vcd +vcd+dut+pipeline_fetch+tb_top_level.uGPGPU.uStreamingMultiProcessor.uPipelineFetch +TESTNAME=pipeline_fetch -cdfout __fubs__/design/pipeline_fetch/cdfout +dictionary+values+all -fpp 2048 +limit+hyperfault+0 -fmsh -testdir __fubs__/design/pipeline_fetch/ -l __fubs__/design/pipeline_fetch/simout-N0
+23/01/30 16:05:06  Note:    Fault simulation for Test: pipeline_fetch
+23/01/30 16:05:06  Note:    Job fault_sim Test: pipeline_fetch begun
+23/01/30 16:05:17  Note:    Job fault_sim completed: Host: buono Test: pipeline_fetch
+23/01/30 16:05:17  Note:    Record simulation results for Test: pipeline_fetch
+23/01/30 16:05:20  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/boots -record -dir ./ -fub design -test pipeline_fetch -fdef sim.fdef -fntn 65537 __fubs__/design/pipeline_fetch/pipeline_fetch.fdef -l __fubs__/design/pipeline_fetch/boots.log
+23/01/30 16:05:20  Note:    Job boots Test: pipeline_fetch begun
+23/01/30 16:05:20  Note:    Job boots completed: Host: buono Test: pipeline_fetch
+23/01/30 16:05:23  Note:    Simulation of test pipeline_fetch complete
+#                                Prime                  Total
+# Test: pipeline_fetch
+# Total Faults:                   6174                   9320
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2701    43.75%         4356    46.74%
+# Dropped Potential Faults:          2     0.03%            2     0.02%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            1884    30.52%         2360    25.32%
+# Not Observed:                    700    11.34%          834     8.95%
+# Not Controlled:                  887    14.37%         1768    18.97%
+# Simulation Times:          
+#   Toggle:                   00:00:00
+#   Fault Cumulative:         00:00:11
+#   Fault Wall Clock:         00:00:14
+#
+# Cumulative Test Results
+# Total Faults:                   6174                   9320
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2701    43.75%         4356    46.74%
+# Dropped Potential Faults:          2     0.03%            2     0.02%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            1884    30.52%         2360    25.32%
+# Not Observed:                    700    11.34%          834     8.95%
+# Not Controlled:                  887    14.37%         1768    18.97%
+#
+# Untestable Unused:                33                     50
+#
+23/01/30 16:05:23  Note:    Simulation Completed.
+23/01/30 16:05:23  Note:    Updating Testability Report
+
+# Tests simulated in this session:
+#                                Prime                  Total
+# Test: pipeline_fetch
+# Total Faults:                   6174                   9320
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2701    43.75%         4356    46.74%
+# Dropped Potential Faults:          2     0.03%            2     0.02%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            1884    30.52%         2360    25.32%
+# Not Observed:                    700    11.34%          834     8.95%
+# Not Controlled:                  887    14.37%         1768    18.97%
+# Simulation Times:          
+#   Toggle:                   00:00:00
+#   Fault Cumulative:         00:00:11
+#   Fault Wall Clock:         00:00:14
+#
+# Cumulative Test Results
+# Total Faults:                   6174                   9320
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2701    43.75%         4356    46.74%
+# Dropped Potential Faults:          2     0.03%            2     0.02%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            1884    30.52%         2360    25.32%
+# Not Observed:                    700    11.34%          834     8.95%
+# Not Controlled:                  887    14.37%         1768    18.97%
+#
+# Untestable Unused:                33                     50
+#
+# Test Coverage:                          43.76%                 46.75%
+# Fault Coverage:                         43.53%                 46.50%
+#
+>  
+> coverage(file=[SAF_coverage.sff]) 
+23/01/30 16:05:26  Note:    Running coverage analysis
+23/01/30 16:05:27  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_report +fm -dir ./ +format+standard -out ./SAF_coverage.sff -testinfo __fubs__/testid.txt -l fault_report.log
+23/01/30 16:05:27  Note:    Job fault_report completed: Host: buono
+23/01/30 16:05:27  Note:    Fault report file is SAF_coverage.sff
+> # coverage (type=[dictionary],file=[saf_dic_short.txt],test=[RCA], style=[short]) 
+>  
+> #coverage(type=[dictionary],test=[RCA],file=[saf_dic.txt])   
+> coverage (type=[dictionary],file=[saf_dic_long.txt],test=[pipeline_fetch]) 
+23/01/30 16:05:27  Note:    Creating coverage dictionary
+23/01/30 16:05:27  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_report -dict __fubs__/design/pipeline_fetch/cdfout -dictout saf_dic_long.txt +format+standard -l __fubs__/design/pipeline_fetch/pipeline_fetch_cdf.log -fdef __fubs__/design/pipeline_fetch/pipeline_fetch.fdef
+23/01/30 16:05:30  Note:    Job fault_report completed: Host: buono
+23/01/30 16:05:30  Note:    Coverage dictionary file is 'saf_dic_long.txt'
+>  
+23/01/30 16:05:30  Note:    Script file complete
+23/01/30 16:05:30  Note:    Mon Jan 30 16:05:30 CET 2023
+#                                Total Run Times                                 
+#
+#                              Queued             CPU               Wall  
+# Fault simulation            00:00:00          00:00:11          00:00:14
+# Toggle simulation           00:00:00          00:00:00          00:00:04
+#
+#
+#                            Time Allocation Per Tool                            
+#
+#                                   Queued                Running      
+# Fault simulation            00:00:00     0.00%     00:00:11    70.54%
+# Fault creation              00:00:00     0.00%     00:00:00     2.20%
+# Fault results recording     00:00:00     0.00%     00:00:00     1.00%
+# Testability                 00:00:00     0.00%     00:00:00     1.01%
+# Toggle simulation           00:00:00     0.00%     00:00:00     1.11%
+# Fault coverage              00:00:00     0.00%     00:00:04    24.14%
+#----------------------------------------------------------------------
+# Total                       00:00:00     0.00%     00:00:15   100.00%
+CPU Time: 15.1s ; Elapsed Time: 32.1s ; Data Size: 137.1MB
