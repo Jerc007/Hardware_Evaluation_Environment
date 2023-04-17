@@ -79,7 +79,7 @@ Once the two previous steps are correctly performed, the profiling, evaluation a
 **If the purpose is to analyze the effect on the target hardware units (e.g., control units in GPUs), the preliminary steps can be skipped.**
 
 
-## Configuration steps of the environment:
+## Configuration and description of the environment:
 
 The environment is based in the follow files hierarchy:
 
@@ -98,28 +98,31 @@ Other complementary tools:
 
 The *general_launcher.py* file is the main file of the environment and configures and handles the complete execution of the profiling, fault-injection and error classification tasks.
 
-To execute a the evaluation, the following command is used:
-
-```python3 general_launcher.py target_application target_unit```
-
-where, *target_application* and *target_unit* are the target instructions from a specific application and the target unit for evaluation, respectively.
-
-Three target units (*target_unit*) can be evaluated: *warp_unit*, *decode*, and *fetch*.
-Moreover, the instruction from fourteen applications can be evaluated: *back_propagation*, *euler*, *FFT*, *gray_filter*, *mxm*, *mxm_simple*, *nn*, *reduction*, *scalar_vector_product*, *scan*, *sobel*, *sort*, *transpose*, and *vector_add*.
-
 The *gpu_compile.tcl* is mainly used to handle the hardware profiling operation. Moreover, this procedure allows the collection of target information from the instruction's execution per workload.
 
 The *launch_zoixs.sh* handles the configuration and execution of the focused fault simulation campaigns on the hardware units. This step is executed through several sets of multi-threading schemes that are managed by the general controller of the environment (*general_launcher.py*).
 
 The *fault_analyzer.py* is only used after all previous steps finished and associates the intermediate results from the previous steps to identify any possible presence of observable errors.
 
-A set of complementary tools (*analyze_use_units.py*, *HW_SW_analyzer.py*, *instruction_errors_analyzer.py*, and *multiple_faults_analyzer.py*) are used to provide additional metrics and analyses.
+A set of complementary tools (*analyze_use_units.py*, *HW_SW_analyzer.py*, *instruction_errors_analyzer.py*, and *multiple_faults_analyzer.py*) are used to provide additional metrics and post-evaluation analyses.
+
+## Operation of the environment:
+
+To execute a hardware analysis and evaluation, please use the following command from the root directory:
+
+```python3 general_launcher.py target_application target_unit```
+
+where, *target_application* and *target_unit* are the target application and the target unit for evaluation, respectively.
+
+The evnironment is configured to evaluate, by default, the instructions from fourteen applications, according to the first input argument to the environment: *back_propagation*, *euler*, *FFT*, *gray_filter*, *mxm*, *mxm_simple*, *nn*, *reduction*, *scalar_vector_product*, *scan*, *sobel*, *sort*, *transpose*, and *vector_add*.
+
+Moreover, three target units (*target_unit*) can be evaluated by default: *warp_unit*, *decode*, and *fetch*.
 
 
 
 ## Example of simple analysis and evaluation:
 
-The following example shows the use of the environment to evaluate the instructions from the vector_add application in the fetch unit:
+The following example shows the use of the environment to evaluate the instructions from the *vector_add* application in the *decode* unit:
 
 ```python3 general_launcher.py vector_add decode```
 
@@ -128,7 +131,6 @@ Once, the simulation and evaluations are finished, you will observe a new folder
 - *individual_ins/*
 
 contains the individual reports per dynamic instruction from the application.
-
 
 - *decode_global_general_structure_execution_errors.txt*
 - *decode_global_general_structure_operand_errors.txt*
@@ -175,14 +177,9 @@ These contain the classification of the dynamic instructions into each visible e
 
 contains the fine-grain hardware-level classification of the faults and the main effect at the output.
 
-Other files are use as intermediate-step files for the analyses.
+The additional files are intermediate-step files, generated during the procedures of error evaluation and classification.
 
-
-the general output of the execution must be something like:
-
-
-
-
+If the profiling, fault simulation and error classifications are successful, a general output message must show the following information:
 
 ```
 total mask list lenght:
@@ -214,7 +211,14 @@ total mask list lenght:
  fault-injection simulation time(s): 75.3150038719 
  fault analysis time(s): 3.61250519753 
 ```
+Including execution times per each of the three steps, a general overview of the faults analyzed and their initial classifications.
 
+**It is worth noting that according to the observable categories names, these can be indiferently:**
+
+***Operation = Operation***
+***Operand = Resource management***
+***Order = Control-flow***
+***Execution = Parallel managemento***
 
 
 
