@@ -216,9 +216,12 @@ Including execution times per each of the three steps, a general overview of the
 **It is worth noting that according to the observable categories names, these can be indiferently:**
 
 **Operation = Operation**
+
 **Operand = Resource management**
+
 **Order = Control-flow**
-**Execution = Parallel managemento**
+
+**Execution = Parallel management**
 
 
 
