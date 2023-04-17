@@ -44,7 +44,7 @@ tion, **(2)** Focused micro-architectural characterization, and **(3)** Error cl
 
 The operation of the hardware evaluation framework is focused on the micro-architectural characterization of hardware units inside hardware descriptions of digital devices (specially GPUs).
 Thus, a set of preliminary conditions and configurations are required for the correct operation of the environmentm, during the characterization.
-**It must be noted that the previous steps are mandatory when adapting the proposed environment to target new hardware units or when customizing the unit profiling step.**
+**It must be noted that the previous steps are mandatory, when adapting the proposed environment to target new hardware units, or when customizing the unit profiling step.**
 
 Set of preliminary steps:
 
