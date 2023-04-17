@@ -114,7 +114,7 @@ To execute a hardware analysis and evaluation, please use the following command 
 
 where, *target_application* and *target_unit* are the target application and the target unit for evaluation, respectively.
 
-The evnironment is configured to evaluate, by default, the instructions from fourteen applications, according to the first input argument to the environment: *back_propagation*, *euler*, *FFT*, *gray_filter*, *mxm*, *mxm_simple*, *nn*, *reduction*, *scalar_vector_product*, *scan*, *sobel*, *sort*, *transpose*, and *vector_add*.
+The environment is configured to evaluate, by default, the instructions from fourteen applications, according to the first input argument to the environment: *back_propagation*, *euler*, *FFT*, *gray_filter*, *mxm*, *mxm_simple*, *nn*, *reduction*, *scalar_vector_product*, *scan*, *sobel*, *sort*, *transpose*, and *vector_add*.
 
 Moreover, three target units (*target_unit*) can be evaluated by default: *warp_unit*, *decode*, and *fetch*.
 
