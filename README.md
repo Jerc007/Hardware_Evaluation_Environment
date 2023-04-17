@@ -15,7 +15,7 @@ The operation of the framework requires the following packages:
 - Python 3.7
 - ModelSim by Siemens EDA*
 - Z01X by Synopsys*
-- Design Compiler*
+- Design Compiler by Synopsys*
 
 (*)Professional licenses are required
 
