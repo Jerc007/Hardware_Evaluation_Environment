@@ -36,8 +36,7 @@ the analysis and evaluation by resorting to the careful structural analysis of t
 Then, the fault characterization faces the almost unfeasible evaluation times of complete workloads in a GPU (i.e., the complete operation of an application in a gate-level GPU model) by resorting to localized fault injection campaigns (on the target unit, only) and multi-threading mechanisms to split the workload’s instructions and the faults on individual fault evaluations per instruction. 
 A later analysis determines the impact effects at the unit level and also provides the mapping of faults to corresponding feasible instruction errors (i.e., error models) to support accurate cross-layer evaluation.
 
-The environment implements the following three steps of the methodology: **(1)** Instruction’s profiling and unit feature’s extrac-
-tion, **(2)** Focused micro-architectural characterization, and **(3)** Error classification and analysis.
+The environment implements the following three steps of the methodology: **(1)** Instruction’s profiling and unit feature’s extraction, **(2)** Focused micro-architectural characterization, and **(3)** Error classification and analysis.
 
 
 ## Preliminary and Configuration steps:
@@ -226,13 +225,13 @@ total mask list lenght:
 
 ## Estimated times for the hardware evaluation:
 
-The environment directly depends on three main parameters to stimate its performance during execution:
+The environment directly depends on three main parameters affecting the execution performance per evaluation:
 
 - **Computational power** of the used *server/workstation/laptop* for its deployment.
 
 - **Workload to be evaluated:** This parameter is directly related with the number of dynamic instructions to be evaluated from a workload. Thus, a proportional increase in the evaluation time is expected for a large number of dynamic instruction per workload.
 
-- **Number of Faults per hardware unit:** This parameter directly depends on the structures and detalied descriptions of a targeted unit for the evaluation. 
+- **Number of Faults per hardware unit:** This parameter directly depends on the structures and detailed descriptions of a targeted unit for the evaluation. 
 
 It is worth noting that the main memory (RAM) size might affect the performance and efficiency of the multi-threading mechanisms for the parallel fault injection experiments.
 
