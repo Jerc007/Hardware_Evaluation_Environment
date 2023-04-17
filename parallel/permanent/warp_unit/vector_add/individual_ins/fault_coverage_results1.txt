@@ -1,0 +1,186 @@
+
+                                   Z01X (TM)
+
+       Version S-2021.09-SP1-1 for linux64 - Jan 11, 2022      
+
+                    Copyright (c) 1999 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Wed Feb 01 21:15:00 CET 2023
+Z01X (TM) Version: S-2021.09-SP1-1 (64-bit, Jan 11 2022) for Linux 64-bit
+
+23/02/01 21:15:00  Note:    Reading load file:bin/permanent_faults_gen.fmsh
+>  
+>  
+> set(var=[resources], messages=[all]) 
+23/02/01 21:15:00  Note:    Set resources[messages] to "all".
+> set(var=[defines], format=[standard]) 
+23/02/01 21:15:00  Note:    Set defines[format] to "standard".
+> set(var=[defines], dictionary.enable=[1]) 
+23/02/01 21:15:00  Note:    Set defines[dictionary.enable] to 1.
+23/02/01 21:15:00  Warning: Options will be saved when a design is opened
+> set(var=[fsim], dictionary.values=[all]) 
+23/02/01 21:15:00  Note:    Set fsim[dictionary.values] to "all".
+> set(var=[fdef], method=[fr], fr.fr=[bin/fault_list.sff],abort=[error]) 
+23/02/01 21:15:00  Note:    Set fdef[fr.fr] to "bin/fault_list.sff".
+23/02/01 21:15:00  Note:    Set fdef[abort] to "error".
+23/02/01 21:15:00  Note:    Set fdef[method] to "fr".
+> # set (var=[coats],status=[NA,NX,PP,FP,PD,FD,PE,FE,PL,LS,PS,RS,PR,RE,PX,DX]) 
+> # set (var=[coats],status=[DD, ND]) 
+>  
+> set (var=[fsim],hyperfault=[0]) 
+23/02/01 21:15:00  Note:    Set fsim[hyperfault] to 0.
+> design() 
+23/02/01 21:15:01  CMD: cp bin/fault_list.sff __globfiles__/fault_list.sff
+23/02/01 21:15:01  Note:    Generating design fault universe file
+23/02/01 21:15:02  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fr2fdef -fr __globfiles__/fault_list.sff +warnreturn+0 +format+standard +verbose -l fr2fdef.log
+23/02/01 21:15:02  Note:    Job fr2fdef begun
+23/02/01 21:15:02  Note:    Job fr2fdef completed: Host: buono
+23/02/01 21:15:02  Note:    Total: 29850 Prime: 18386 Collapsed: 11464 Untestable: 1098
+23/02/01 21:15:02  Note:    Fault Generation Completed 0 Errors 1 Warnings
+23/02/01 21:15:02  Note:    Created design, directory=/home/e.rodriguez/Z0IXs_parallel/permanent/warp_unit_vector_add_1
+23/02/01 21:15:02  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -func __fubs__/design/__path__ -genfub +job_id+2c65b14f2a8697a5 -l __fubs__/design/design.log
+>  
+> addtst(test=[warp_unit], stimtype=[vcd], dictionary.enable=[1], stim=[DUT/RTL_sim/dumpports_warp_unit.vcd],dut.stim=[warp_unit,tb_top_level.uGPGPU.uStreamingMultiProcessor.uWarpUnit],stim_options=[+TESTNAME=warp_unit] ) 
+23/02/01 21:15:03  Note:    Adding test: warp_unit
+23/02/01 21:15:03  CMD: ln -s ../../sim.zdb __tests__/warp_unit/sim.zdb
+23/02/01 21:15:03  CMD: ln -s ../../zoix.sim __tests__/warp_unit/zoix.sim
+23/02/01 21:15:03  CMD: cp DUT/RTL_sim/dumpports_warp_unit.vcd __tests__/warp_unit/dumpports_warp_unit.vcd
+23/02/01 21:15:03  CMD: ln -s ../../../__tests__/warp_unit/dumpports_warp_unit.vcd __fubs__/design/warp_unit/dumpports_warp_unit.vcd
+23/02/01 21:15:03  CMD: ln -s ../../../sim.zdb __fubs__/design/warp_unit/sim.zdb
+23/02/01 21:15:03  CMD: ln -s ../../../zoix.sim __fubs__/design/warp_unit/zoix.sim
+>  
+> #addtst(test=[RCA], stimtype=[vcd], dictionary.enable=[1], stim=[../tmax/dumpports_rtl.riscv_core.vcde],stim_options=[+TESTNAME=riscv_core] ) 
+>  
+> fsim() 
+23/02/01 21:15:03  Note:    Performing testability analysis
+23/02/01 21:15:03  CMD: ./zoix.sim -toggle __tests__/warp_unit/warp_unit.vtog -fstrobe __tests__/warp_unit/__fstrobes__ -l __tests__/warp_unit/zoix_rt.log +vcd+file+__tests__/warp_unit/dumpports_warp_unit.vcd +progress -testdir __tests__/warp_unit/ +vcd+dut+warp_unit+tb_top_level.uGPGPU.uStreamingMultiProcessor.uWarpUnit +TESTNAME=warp_unit -testname warp_unit +job_id+ec35713f2aa66745
+23/02/01 21:15:03  Note:    Toggle simulation for test: warp_unit
+23/02/01 21:15:03  Note:    Job toggle Test: warp_unit begun
+23/02/01 21:15:11  Note:    Job toggle completed: Host: buono Test: warp_unit
+23/02/01 21:15:11  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -test warp_unit -seltyp observe +job_id+2c65b14f2a8697a5 -fstrobe __tests__/warp_unit/__fstrobes__ -testid 65537 -l __fubs__/design/warp_unit/coats.log
+23/02/01 21:15:11  Note:    Testability analysis for Test: warp_unit
+23/02/01 21:15:11  Note:    Job coats Test: warp_unit begun
+23/02/01 21:15:11  Note:    Job coats completed: Host: buono Test: warp_unit
+23/02/01 21:15:14  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/boots -fdeffiles __fubs__/design/fdeffiles.txt -record -dir ./ -fub design -fdef sim.fdef -l __fubs__/design/boots.log
+23/02/01 21:15:14  Note:    Job boots Test: All begun
+23/02/01 21:15:15  Note:    Job boots completed: Host: buono Test: All
+23/02/01 21:15:15  Note:    Updating Testability Report
+23/02/01 21:15:15  Note:    Simulating Test: warp_unit
+23/02/01 21:15:15  Note:    Fault simulation on Test: warp_unit starting
+23/02/01 21:15:15  Note:    Generate fault origins for Test: warp_unit
+23/02/01 21:15:15  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/coats -dir ./ -fub design -test warp_unit -recalc -m -l __fubs__/design/warp_unit/fdef.log
+23/02/01 21:15:15  Note:    Job coats Test: warp_unit begun
+23/02/01 21:15:15  Note:    Job coats completed: Host: buono Test: warp_unit
+23/02/01 21:15:15  Note:    Test: warp_unit selected 6264 out of 18386 remaining faults to simulate
+23/02/01 21:15:16  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_sim -fdef __fubs__/design/warp_unit/warp_unit.fdef -q +vcd+file+__tests__/warp_unit/dumpports_warp_unit.vcd +vcd+dut+warp_unit+tb_top_level.uGPGPU.uStreamingMultiProcessor.uWarpUnit +TESTNAME=warp_unit -cdfout __fubs__/design/warp_unit/cdfout +dictionary+values+all -fpp 2048 +limit+hyperfault+0 -fmsh -testdir __fubs__/design/warp_unit/ -l __fubs__/design/warp_unit/simout-N0
+23/02/01 21:15:16  Note:    Fault simulation for Test: warp_unit
+23/02/01 21:15:16  Note:    Job fault_sim Test: warp_unit begun
+23/02/01 21:19:55  Note:    Job fault_sim completed: Host: buono Test: warp_unit
+23/02/01 21:19:55  Note:    Record simulation results for Test: warp_unit
+23/02/01 21:19:58  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/boots -record -dir ./ -fub design -test warp_unit -fdef sim.fdef -fntn 65537 __fubs__/design/warp_unit/warp_unit.fdef -l __fubs__/design/warp_unit/boots.log
+23/02/01 21:19:58  Note:    Job boots Test: warp_unit begun
+23/02/01 21:19:58  Note:    Job boots completed: Host: buono Test: warp_unit
+23/02/01 21:20:01  Note:    Simulation of test warp_unit complete
+#                                Prime                  Total
+# Test: warp_unit
+# Total Faults:                  18386                  29850
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2164    11.77%         3564    11.94%
+# Dropped Potential Faults:        235     1.28%          381     1.28%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            3865    21.02%         5753    19.27%
+# Not Observed:                  10570    57.49%        16858    56.48%
+# Not Controlled:                 1552     8.44%         3294    11.04%
+# Simulation Times:          
+#   Toggle:                   00:00:08
+#   Fault Cumulative:         00:04:39
+#   Fault Wall Clock:         00:04:43
+#
+# Cumulative Test Results
+# Total Faults:                  18386                  29850
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2164    11.77%         3564    11.94%
+# Dropped Potential Faults:        235     1.28%          381     1.28%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            3865    21.02%         5753    19.27%
+# Not Observed:                  10570    57.49%        16858    56.48%
+# Not Controlled:                 1552     8.44%         3294    11.04%
+#
+# Untestable Unused:               644                    886
+# Untestable Tied:                 212                    212
+#
+23/02/01 21:20:01  Note:    Simulation Completed.
+23/02/01 21:20:01  Note:    Updating Testability Report
+
+# Tests simulated in this session:
+#                                Prime                  Total
+# Test: warp_unit
+# Total Faults:                  18386                  29850
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2164    11.77%         3564    11.94%
+# Dropped Potential Faults:        235     1.28%          381     1.28%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            3865    21.02%         5753    19.27%
+# Not Observed:                  10570    57.49%        16858    56.48%
+# Not Controlled:                 1552     8.44%         3294    11.04%
+# Simulation Times:          
+#   Toggle:                   00:00:08
+#   Fault Cumulative:         00:04:39
+#   Fault Wall Clock:         00:04:43
+#
+# Cumulative Test Results
+# Total Faults:                  18386                  29850
+# Detected Faults:                   0     0.00%            0     0.00%
+# Dropped Detected Faults:        2164    11.77%         3564    11.94%
+# Dropped Potential Faults:        235     1.28%          381     1.28%
+# Potential Faults:                  0     0.00%            0     0.00%
+# Not Detected Faults:            3865    21.02%         5753    19.27%
+# Not Observed:                  10570    57.49%        16858    56.48%
+# Not Controlled:                 1552     8.44%         3294    11.04%
+#
+# Untestable Unused:               644                    886
+# Untestable Tied:                 212                    212
+#
+# Test Coverage:                          12.41%                 12.58%
+# Fault Coverage:                         11.86%                 12.13%
+#
+>  
+> coverage(file=[SAF_coverage.sff]) 
+23/02/01 21:20:04  Note:    Running coverage analysis
+23/02/01 21:20:04  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_report +fm -dir ./ +format+standard -out ./SAF_coverage.sff -testinfo __fubs__/testid.txt -l fault_report.log
+23/02/01 21:20:05  Note:    Job fault_report completed: Host: buono
+23/02/01 21:20:05  Note:    Fault report file is SAF_coverage.sff
+> # coverage (type=[dictionary],file=[saf_dic_short.txt],test=[RCA], style=[short]) 
+>  
+> #coverage(type=[dictionary],test=[RCA],file=[saf_dic.txt])   
+> coverage (type=[dictionary],file=[saf_dic_long.txt],test=[warp_unit]) 
+23/02/01 21:20:05  Note:    Creating coverage dictionary
+23/02/01 21:20:05  CMD: /eda/synopsys/2021-22/RHELx86/Z01X_2021.09-SP1-1//bin/fault_report -dict __fubs__/design/warp_unit/cdfout -dictout saf_dic_long.txt +format+standard -l __fubs__/design/warp_unit/warp_unit_cdf.log -fdef __fubs__/design/warp_unit/warp_unit.fdef
+23/02/01 21:20:07  Note:    Job fault_report completed: Host: buono
+23/02/01 21:20:07  Note:    Coverage dictionary file is 'saf_dic_long.txt'
+>  
+23/02/01 21:20:07  Note:    Script file complete
+23/02/01 21:20:07  Note:    Wed Feb 01 21:20:07 CET 2023
+#                                Total Run Times                                 
+#
+#                              Queued             CPU               Wall  
+# Fault simulation            00:00:00          00:04:39          00:04:43
+# Toggle simulation           00:00:00          00:00:08          00:00:11
+#
+#
+#                            Time Allocation Per Tool                            
+#
+#                                   Queued                Running      
+# Fault simulation            00:00:00     0.00%     00:04:39    95.99%
+# Fault creation              00:00:00     0.00%     00:00:01     0.27%
+# Fault results recording     00:00:00     0.00%     00:00:00     0.14%
+# Testability                 00:00:00     0.00%     00:00:00     0.13%
+# Toggle simulation           00:00:00     0.00%     00:00:08     2.65%
+# Fault coverage              00:00:00     0.00%     00:00:02     0.81%
+#----------------------------------------------------------------------
+# Total                       00:00:00     0.00%     00:04:51   100.00%
+CPU Time: 290.1s ; Elapsed Time: 307.5s ; Data Size: 137.1MB

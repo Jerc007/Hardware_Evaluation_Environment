@@ -1,0 +1,9 @@
+IADD32 incorrect_operation_code 843
+GST incorrect_operation_code 263
+IMAD incorrect_operation_code 260
+FADD32 incorrect_operation_code 265
+GLD incorrect_operation_code 550
+MOV incorrect_operation_code 278
+RET incorrect_operation_code 292
+I2I incorrect_operation_code 262
+SHL incorrect_operation_code 291

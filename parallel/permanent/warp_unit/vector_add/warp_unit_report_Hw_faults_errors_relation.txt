@@ -1,0 +1,8 @@
+Software errors, HW faults
+operation: 3304 6720
+operand: 6925 14129
+order: 0 0
+execution: 9508 20395
+hanging: 45673 45673
+-----------------------------------------------------
+Total: 65410 41244

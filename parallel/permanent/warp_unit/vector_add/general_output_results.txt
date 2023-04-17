@@ -1,0 +1,29 @@
+total mask list lenght: 
+12211
+total number of global_general_structure_operation_errors:
+3304
+total number of global_general_structure_operand_errors:
+6408
+total number of global_general_structure_order_errors:
+0
+total number of global_general_structure_execution_errors:
+7258
+Number of operation errors per subgroup: 
+Incorrect op. code: 3304        Invalid op. code: 0
+Number of operand errors per subgroup:  
+Incorrect register addressed: 5165        Incorrect parallel parameters: 1760
+Invalid register: 0        Incorrect immediate operand: 0
+Number of order errors per subgroup: 
+commitment order violation: 0
+Number of execution errors per subgroup: 
+Incorrect active threads: 2631        Incorrect active CTA: 213
+Incorrect active line: 3522        Incorrect active warp: 3142
+Incorrect functional unit: 0        Incorrect memory source: 0
+Incorrect memory destiny: 0
+execution times:
+Golden model import time(s): 7.57748508453
+Golden simulation time(s): 37.7672579288
+Total golden simuation time(s): 45.3447430134
+fault-injection simulation time(s): 796.043356895
+fault analysis time(s): 2.94628381729
+done........................................................................
